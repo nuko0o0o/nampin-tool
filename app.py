@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("ナンピン後の価格はいかに")
+st.title("ナンピン計算")
 
 current_shares = st.number_input(
     "元々の株数",
@@ -38,21 +38,20 @@ if total_shares > 0:
         + add_shares * add_price
     ) / total_shares
 
-    st.header("計算結果")
 
     st.markdown(
         f"""
         <div style="
             background-color:#0e4025;
-            padding:20px;
+            padding:10px;
             border-radius:10px;
             text-align:center;
         ">
             <h3 style="color:white;">
-                ナンピン後平均取得単価
+                ナンピン後の単価
             </h3>
             <h1 style="color:#00ff88;
-                       font-size:140px;
+                       font-size:100px;
             ">
                 {new_average:.2f}円
             </h1>
